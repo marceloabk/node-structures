@@ -1,0 +1,13 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arrayStack.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "ISC"
+}
