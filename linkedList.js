@@ -3,7 +3,7 @@ import {
 } from './utils.js'
 import {
   Node
-} from './models/linkedListModels.js'
+} from './models/node.js'
 
 export class LinkedList {
   constructor(equalsFn = defaultEquals) {
@@ -27,7 +27,7 @@ export class LinkedList {
 
   insert(element, position) {
     const node = new Node(element)
-    if (position < 0 || position > this.count) {
+    if (position === undefined || position < 0 || position > this.count) {
       return false
     } else if (position === 0) {
       node.next = this.head
@@ -45,7 +45,7 @@ export class LinkedList {
 
   getElementAt(index) {
     let current = this.head
-    if (index >= this.count || index < 0) {
+    if (index === undefined || index >= this.count || index < 0) {
       current = undefined
     } else {
       for (let i = 0; i < index; i++)
@@ -73,12 +73,12 @@ export class LinkedList {
   removeAt(position) {
     let value
 
-    if (position < 0 || position >= this.count) {
+    if (position === undefined || position < 0 || position >= this.count) {
       return
     } else if (position === 0) {
       value = this.head
       this.head = this.head.next
-    } else if (position) {
+    } else {
       const previous = this.getElementAt(position - 1)
       value = previous.next
       previous.next = previous.next.next
