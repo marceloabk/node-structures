@@ -37,6 +37,6 @@ export class Stack {
   }
 
   toString() {
-    return Object.values(this._items).join(', ')
+    return Object.values(this._items).join(", ")
   }
 }

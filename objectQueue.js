@@ -39,6 +39,6 @@ export class Queue {
   }
 
   toString() {
-    return Object.values(this.items).join(', ')
+    return Object.values(this.items).join(", ")
   }
 }

@@ -8,7 +8,6 @@ export class Deque {
   addFront(element) {
     if (this.isEmpty()) this.count++
 
-
     this.items[this.lowestCount] = element
     this.lowestCount--
   }
@@ -66,7 +65,7 @@ export class Deque {
   toString() {
     return Object.keys(this.items)
       .sort((a, b) => a - b)
-      .map(i => this.items[i])
-      .join(', ')
+      .map((i) => this.items[i])
+      .join(", ")
   }
 }

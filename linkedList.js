@@ -1,9 +1,5 @@
-import {
-  defaultEquals
-} from './utils.js'
-import {
-  Node
-} from './models/node.js'
+import { defaultEquals } from "./utils.js"
+import { Node } from "./models/node.js"
 
 export class LinkedList {
   constructor(equalsFn = defaultEquals) {
@@ -48,8 +44,7 @@ export class LinkedList {
     if (index === undefined || index >= this.count || index < 0) {
       current = undefined
     } else {
-      for (let i = 0; i < index; i++)
-        current = current.next
+      for (let i = 0; i < index; i++) current = current.next
     }
     return current
   }
@@ -101,7 +96,7 @@ export class LinkedList {
   }
 
   toString() {
-    if (!this.head) return ''
+    if (!this.head) return ""
 
     let string = `${this.head.element}`
     let current = this.head.next

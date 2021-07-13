@@ -1,16 +1,10 @@
-import {
-  defaultEquals
-} from './utils.js'
-import {
-  LinkedList
-} from "./linkedList.js";
-import {
-  Node
-} from "./models/node.js"
+import { defaultEquals } from "./utils.js"
+import { LinkedList } from "./linkedList.js"
+import { Node } from "./models/node.js"
 
 export class CircularLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals) {
-    super(equalsFn);
+    super(equalsFn)
   }
 
   insert(element, index) {
@@ -37,7 +31,7 @@ export class CircularLinkedList extends LinkedList {
   }
 
   toString() {
-    if (!this.head) return ''
+    if (!this.head) return ""
 
     let string = `${this.head.element}`
     let current = this.head.next

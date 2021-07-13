@@ -1,11 +1,5 @@
-import {
-  defaultEquals,
-  defaultCompare,
-  compare
-} from "./utils.js"
-import {
-  LinkedList
-} from "./linkedList.js"
+import { defaultEquals, defaultCompare, compare } from "./utils.js"
+import { LinkedList } from "./linkedList.js"
 
 export class SortedLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals, compareFn = defaultCompare) {
@@ -25,8 +19,7 @@ export class SortedLinkedList extends LinkedList {
     let current = this.head
     for (; i < this.count && current; i++) {
       const result = this.compareFn(element, current.element)
-      if (result === compare.LESS_THAN)
-        break
+      if (result === compare.LESS_THAN) break
       current = current.next
     }
     return i

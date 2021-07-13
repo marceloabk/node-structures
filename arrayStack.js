@@ -2,8 +2,7 @@ export class Stack {
   constructor(initialItems) {
     this.items = []
 
-    if (initialItems)
-      this.push(initialItems)
+    if (initialItems) this.push(initialItems)
   }
 
   push(elements) {
